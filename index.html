@@ -1,300 +1,273 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Interpretación de la Onda de Presión Arterial (OPA) | Curso Accesos Vasculares</title>
-<style>
-  :root{
-    --bg:#f8fafc;--text:#0f172a;--muted:#475569;--card:#ffffff;--border:#e2e8f0;
-    --accent:#3730a3;--chip:#eef2ff;--ok:#0d7a4e;--warn:#a46300;
-  }
-  body{margin:0;background:var(--bg);color:var(--text);
-       font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.55}
-  .wrap{max-width:1100px;margin:28px auto;padding:0 20px}
-  .hero{background:linear-gradient(180deg,#fff,#f3f6ff);border:1px solid var(--border);
-        border-radius:18px;padding:24px 22px;box-shadow:0 10px 28px rgba(15,23,42,.06)}
-  h1{margin:.2rem 0 .6rem;font-size:clamp(1.4rem,2.8vw,2rem);font-weight:800}
-  .sub{color:var(--muted);margin:0 0 8px;font-weight:600}
-  .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
-  .card h3{margin:.1rem 0 .5rem;font-size:1.06rem}
-  .note{color:#334155;font-size:.94rem}
-  .list{padding-left:1.1rem;margin:.4rem 0 .8rem}
-  .img{width:100%;height:auto;border:1px solid var(--border);border-radius:10px;background:#fff}
-  .chips{display:flex;gap:8px;flex-wrap:wrap;margin:.3rem 0 0}
-  .chip{background:var(--chip);border:1px solid #c7d2fe;color:var(--accent);
-        border-radius:999px;padding:.18rem .54rem;font-size:.8rem}
-  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
-  .k{background:#fafafa;border:1px dashed var(--border);border-radius:12px;padding:10px;text-align:center}
-  .k b{display:block}
-  .footer{color:var(--muted);font-size:.9rem;margin:18px 0 6px}
-  @media (max-width:960px){.grid,.two{grid-template-columns:1fr}}
-  /* mini calculadora */
-  .calc{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin-top:10px}
-  .calc label{display:block;font-size:.85rem;color:#334155}
-  .calc input{padding:8px 10px;border:1px solid var(--border);border-radius:10px;width:120px}
-  .btn{appearance:none;border:1px solid #c7d2fe;background:#eef2ff;color:#1f2a8a;border-radius:10px;padding:8px 12px;cursor:pointer}
-  .pill{display:inline-block;background:#e6f7ef;border:1px solid #b6eccf;color:var(--ok);
-        border-radius:999px;padding:.15rem .55rem;font-size:.8rem;margin-left:8px}
-  .pill.warn{background:#fff5e6;border-color:#ffd699;color:var(--warn)}
-  .lead{font-weight:600}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía para una Onda de Presión Arterial Óptima</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #005a87;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 5px solid #003d5b;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        nav {
+            background: #333;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #4dd0e1;
+            text-decoration: underline;
+        }
+
+        section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #005a87;
+            border-bottom: 3px solid #005a87;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #003d5b;
+            font-size: 1.5em;
+            margin-top: 25px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .grid-item {
+            background-color: #eef7fa;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 5px solid #4dd0e1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <!-- INTRO -->
-    <section class="hero">
-      <h1>Interpretación de la Onda de Presión Arterial (OPA)</h1>
-      <p class="sub">Guía visual para evaluar calidad de señal, morfología, VPP y toma de decisiones hemodinámicas en UCI/UEH.</p>
-    </section>
 
-    <!-- 1) FUNDAMENTOS -->
-    <section class="grid" style="margin-top:18px">
-      <article class="card">
-        <h3>1) Fundamentos del sistema</h3>
-        <ul class="list">
-          <li>Catéter arterial + transductor + sistema presurizado a <b>300 mmHg</b> (lavado 2–4 ml/h).</li>
-          <li>Monitor muestra <b>PAS</b>, <b>PAD</b> y <b>PAM</b> (área bajo la curva = perfusión tisular).</li>
-          <li>Nivelar el transductor en el <b>eje flebostático</b> (4° EIC, línea medio-axilar) y realizar <b>“cero”</b> antes de medir.</li>
+    <header>
+        <h1>Claves para una Onda de Presión Arterial Óptima</h1>
+        <p>Una guía completa para la monitorización hemodinámica invasiva</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#montaje">Montaje y Calibración</a></li>
+            <li><a href="#analisis">Análisis de la Onda</a></li>
+            <li><a href="#optimizacion">Optimización</a></li>
         </ul>
-        <div class="chips">
-          <span class="chip">Seguridad del sistema</span>
-          <span class="chip">Calibración</span>
-          <span class="chip">Perfusión</span>
-        </div>
-      </article>
-      <figure class="card">
-        <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-1.png" alt="Set de transducción arterial"/>
-        <figcaption class="note">Kit y montaje de transducción.</figcaption>
-      </figure>
-    </section>
+    </nav>
 
-    <!-- 2) EJE FLEBOSTÁTICO Y CERO -->
-    <section class="two" style="margin-top:16px">
-      <figure class="card">
-        <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-2.png" alt="Eje flebostático"/>
-        <figcaption class="note">Localización del eje flebostático.</figcaption>
-      </figure>
-      <article class="card">
-        <h3>2) Nivelación y “cero”</h3>
-        <ol class="list">
-          <li>Cerrar llave al paciente y abrir al aire (esterilidad).</li>
-          <li>Accionar <b>puesta a cero</b> → verificar <b>0 mmHg</b>.</li>
-          <li>Cerrar, colocar tapón y <b>lavar</b> el sistema.</li>
-        </ol>
-        <p class="note">Una mala nivelación/cero produce lecturas falsas (sobre/subestimación).</p>
-      </article>
-    </section>
+    <div class="container">
 
-    <!-- 3) FLUSH TEST -->
-    <section class="card" style="margin-top:16px">
-      <h3>3) Calidad de la onda – Flush test (onda cuadrada)</h3>
-      <div class="two">
-        <div>
-          <p class="note">Criterios de onda fiable tras el lavado rápido:</p>
-          <div class="two">
-            <figure>
-              <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-4.png" alt="Criterios generales"/>
-              <figcaption class="note">Retorno rápido a línea de base (1–2 picos).</figcaption>
-            </figure>
-            <figure>
-              <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-5.png" alt="Regla del segundo pico"/>
-              <figcaption class="note">Segundo pico &lt; 1/3 del primero.</figcaption>
-            </figure>
-          </div>
-        </div>
-        <div>
-          <div class="two">
-            <figure>
-              <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-7.png" alt="Subamortiguada"/>
-              <figcaption class="note">Subamortiguada (&gt;2 picos) → <b>PAS alta</b>, <b>PAD baja</b>.</figcaption>
-            </figure>
-            <figure>
-              <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-8.png" alt="Sobreamortiguada"/>
-              <figcaption class="note">Sobreamortiguada (sin picos) → <b>PAS baja</b>, <b>PAD alta</b>.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-      <div class="kpis">
-        <div class="k"><b>Óptima</b>1.5–2 oscilaciones</div>
-        <div class="k"><b>Subamort.</b>Ondas “picudas” (resonancia)</div>
-        <div class="k"><b>Sobreamort.</b>Onda aplanada</div>
-      </div>
-      <p class="note">Causas: líneas largas/blandas o burbujas (underdamping); coágulos, acodaduras o fluido viscoso (overdamping). Solución: purgar, acortar/rigidizar, revisar conexiones.</p>
-    </section>
+        <section id="introduccion">
+            <h2>1. Introducción a la Monitorización Invasiva</h2>
+            <p>La cateterización arterial es una técnica común en Unidades de Cuidados Críticos para la monitorización continua e invasiva de la presión arterial. Disponer de una onda de calidad es imprescindible para conocer con exactitud el estado hemodinámico del paciente, ya que una mala calidad puede llevar a interpretaciones erróneas y decisiones clínicas incorrectas.</p>
+            <div class="image-container">
+                <img src="https://asenfovalle.cl/wp-content/uploads/2025/10/Imagen1.jpg" alt="Esquema del sistema de monitorización de presión arterial">
+                <p class="image-caption">Componentes del sistema de transducción de la onda de presión arterial.</p>
+            </div>
+            <p>El sistema transforma la onda mecánica del pulso en una señal digital visible en el monitor. Está caracterizado por su <strong>frecuencia natural</strong> (rapidez de oscilación) y su <strong>coeficiente de atenuación</strong> (fuerzas de fricción), cuyo balance es clave para evitar artefactos.</p>
+        </section>
 
-    <!-- 4) VERIFICACIÓN CON MANGUITO -->
-    <section class="two" style="margin-top:16px">
-      <figure class="card">
-        <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-9.png" alt="Verificación PAS con esfigmomanómetro"/>
-        <figcaption class="note">PAS verdadera = reaparece el pulso al desinflar.</figcaption>
-      </figure>
-      <article class="card">
-        <h3>4) Comprobación de PAS con esfigmomanómetro</h3>
-        <ol class="list">
-          <li>Inflar manguito en misma extremidad hasta aplanar la OPA.</li>
-          <li>Desinflar lentamente: la primera onda pulsátil = <b>PAS real</b>.</li>
-        </ol>
-        <p class="note">Útil si sospechas sobreamortiguación o error de nivelación.</p>
-      </article>
-    </section>
+        <section id="montaje">
+            <h2>2. Montaje y Calibración del Sistema</h2>
+            <p>Un montaje y calibración meticulosos son el primer paso para garantizar una medición precisa.</p>
+            
+            <h3>El Eje Flebostático: El Punto de Referencia</h3>
+            <p>El eje flebostático es el punto de referencia anatómico que corresponde a la aurícula derecha. Es crucial para eliminar el efecto de la presión hidrostática en la medición. Se localiza en la intersección del <strong>cuarto espacio intercostal</strong> con la <strong>línea media axilar</strong>.</p>
+            <div class="image-container">
+                <img src="https://asenfovalle.cl/wp-content/uploads/2025/10/eje-flebos.png" alt="Localización del eje flebostático">
+                <p class="image-caption">El transductor debe nivelarse a la altura del eje flebostático.</p>
+            </div>
 
-    <!-- 5) FENÓMENOS DE RESONANCIA (APARTE DE VPP) -->
-    <section class="card" style="margin-top:18px">
-      <h3>5) Fenómenos de resonancia y amortiguación (calidad de la señal)</h3>
-      <div class="two">
-        <figure>
-          <!-- Usamos la ilustración general de resonancia/amortiguación -->
-          <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-3.png" alt="Fenómenos de resonancia y amortiguación"/>
-          <figcaption class="note">Subamortiguación (resonancia) vs. sobreamortiguación: efectos y corrección.</figcaption>
-        </figure>
-        <article>
-          <p class="note">
-            La fidelidad de la onda depende de la <b>frecuencia natural</b> del sistema y su <b>coeficiente de amortiguación</b>.
-            Si el sistema oscila de más → <b>subamortiguación</b> (PAS alta, PAD baja). Si atenúa en exceso → <b>sobreamortiguación</b> (PAS baja, PAD alta).
-          </p>
-          <ul class="list">
-            <li><b>Subamortiguación:</b> líneas largas/blandas o diámetro interno grande; conexiones flojas; burbujas.</li>
-            <li><b>Sobreamortiguación:</b> coágulos, acodaduras, fluido viscoso; catéter muy flexible o largo.</li>
-          </ul>
-          <p class="note lead">Corrección rápida: purgar aire, retirar llaves/extensiones, usar set rígido y corto, revisar coágulos y conexiones.</p>
-        </article>
-      </div>
-    </section>
+            <h3>Puesta a Cero del Monitor</h3>
+            <p>La "puesta a cero" calibra el sistema a la presión atmosférica, asegurando que el monitor mida únicamente la presión intravascular del paciente. Los pasos son:</p>
+            <ol>
+                <li>Cerrar la llave de tres pasos hacia el paciente y abrirla al aire.</li>
+                <li>Activar la función "Puesta a Cero" en el monitor.</li>
+                <li>Verificar que la onda y el valor numérico en el monitor indiquen 0 mmHg.</li>
+                <li>Cerrar la llave al aire, abrirla hacia el paciente y lavar el sistema.</li>
+            </ol>
+        </section>
 
-    <!-- 6) EJEMPLOS DE AMORTIGUACIÓN -->
-    <section class="two" style="margin-top:16px">
-      <figure class="card">
-        <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-10.png" alt="Amortiguación óptima"/>
-        <figcaption class="note">Amortiguación óptima.</figcaption>
-      </figure>
-      <figure class="card">
-        <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-11.png" alt="Sobreamortiguada"/>
-        <figcaption class="note">Curva sobreamortiguada.</figcaption>
-      </figure>
-      <figure class="card">
-        <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-12.png" alt="Subamortiguada"/>
-        <figcaption class="note">Curva subamortiguada.</figcaption>
-      </figure>
-    </section>
+        <section id="analisis">
+            <h2>3. Análisis de la Calidad de la Onda</h2>
+            <p>Una vez montado el sistema, es vital determinar si la onda es fiable. La principal herramienta para esto es el <strong>Test de la Onda Cuadrada (Flush Test)</strong>.</p>
+            
+            <div class="image-container">
+                 <img src="https://asenfovalle.cl/wp-content/uploads/2025/10/Imagen5.png" alt="Amortiguación Óptima">
+                 <p class="image-caption">Una onda óptimamente amortiguada muestra entre 1.5 y 2 oscilaciones post-lavado.</p>
+            </div>
+            
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Sistema Subamortiguado (Resonancia)</h3>
+                    <p>La onda presenta más de 2 oscilaciones post-lavado. Esto <strong>sobreestima la presión sistólica</strong> y subestima la diastólica. Puede ser causado por catéteres largos, tubuladuras rígidas o burbujas de aire.</p>
+                     <img src="https://asenfovalle.cl/wp-content/uploads/2025/10/Imagen6.png" alt="Sistema Subamortiguado" style="width:100%; border-radius: 5px;">
+                </div>
+                <div class="grid-item">
+                    <h3>Sistema Sobreamortiguado</h3>
+                    <p>La onda muestra menos de 1.5 oscilaciones, con un retorno lento a la línea de base. Esto <strong>subestima la presión sistólica</strong> y sobreestima la diastólica. Causas comunes son coágulos, burbujas, o acodaduras.</p>
+                     <img src="https://asenfovalle.cl/wp-content/uploads/2025/10/Imagen7.png" alt="Sistema Sobreamortiguado" style="width:100%; border-radius: 5px;">
+                </div>
+            </div>
+        </section>
+        
+        <section id="optimizacion">
+            <h2>4. ¿Cómo Evitar los Fenómenos de Resonancia y Amortiguación?</h2>
+            <p>Para obtener una onda de presión arterial fiable y representativa, es fundamental minimizar los artefactos. A continuación se presentan las claves para evitar los problemas más comunes.</p>
+            <div class="image-container">
+                 <img src="https://asenfovalle.cl/wp-content/uploads/2025/10/Imagen2.png" alt="Infografía sobre cómo evitar resonancia y amortiguación">
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Para Evitar la Resonancia (Subamortiguación)</h3>
+                    <ul>
+                        <li>Usar un catéter arterial de longitud, diámetro y material apropiados.</li>
+                        <li>Acondicionar la línea a la temperatura corporal (esperar 1 hora).</li>
+                        <li>Utilizar un transductor de buena calidad.</li>
+                        <li>Emplear mecanismos de amortiguación (ROSE) si es necesario.</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <h3>Para Evitar la Amortiguación (Sobreamortiguación)</h3>
+                    <ul>
+                        <li>Eliminar todas las burbujas de aire del circuito.</li>
+                        <li>No añadir llaves de tres pasos innecesarias.</li>
+                        <li>Asegurar que todas las conexiones estén herméticas.</li>
+                        <li>Evitar alargaderas con elevada compliancia.</li>
+                        <li>Examinar posibles oclusiones del catéter o de la línea.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <!-- 7) VPP + CALCULADORA + CONDUCTA -->
-    <section class="card" style="margin-top:18px">
-      <h3>6) Variación de la presión de pulso (VPP/PPV): interpretación práctica</h3>
-      <p class="note">
-        <b>VPP = (PP<sub>máx</sub> − PP<sub>mín</sub>) / PP<sub>media</sub> × 100</b>.
-        <span class="pill">VPP &gt; 12% sugiere respondedor a volumen</span>
-        <span class="pill warn">Válida solo: VM controlada, sin respiración espontánea, Vt ≥ 8 ml/kg, ritmo regular</span>
-      </p>
-      <div class="calc">
-        <div>
-          <label>PP<sub>máx</sub> (mmHg)</label>
-          <input id="ppmax" type="number" min="0" step="0.1" placeholder="ej. 68"/>
-        </div>
-        <div>
-          <label>PP<sub>mín</sub> (mmHg)</label>
-          <input id="ppmin" type="number" min="0" step="0.1" placeholder="ej. 44"/>
-        </div>
-        <div>
-          <label>PP<sub>media</sub> (mmHg)</label>
-          <input id="ppmed" type="number" min="0" step="0.1" placeholder="ej. 56"/>
-        </div>
-        <button class="btn" onclick="calcVPP()">Calcular</button>
-        <div id="vppOut" class="note"></div>
-      </div>
-      <p class="note" style="margin-top:12px">
-        🧠 <b>Ejemplo clínico:</b> Paciente en shock séptico (VM controlada): PP<sub>máx</sub>=68, PP<sub>mín</sub>=44, PP<sub>media</sub>=56 → <b>VPP=42.8%</b>.<br/>
-        💧 <b>Conducta:</b> administrar bolo de cristaloide 500 ml y reevaluar. Si PAM sube (p.ej., 58→68 mmHg) y VPP desciende a ~10%, suspender fluidos, mantener y reducir vasopresor progresivamente.
-      </p>
-    </section>
+    </div>
 
-    <!-- 8) RADIAL VS FEMORAL -->
-    <section class="two" style="margin-top:16px">
-      <article class="card">
-        <h3>7) Radial vs femoral en shock/vasopresores</h3>
-        <p class="note">En shock con altas catecolaminas, la radial puede <b>subestimar la PAM</b>.
-        Considera sitio <b>femoral</b> para guiar vasopresores y evitar dosis excesivas.</p>
-      </article>
-      <figure class="card">
-        <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-13.png" alt="Radial vs femoral"/>
-        <figcaption class="note">Diferencias periférico–central.</figcaption>
-      </figure>
-    </section>
+    <footer>
+        <p>Información recopilada y estructurada para fines educativos.</p>
+        <p>&copy; 2025 Guía Profesional de Monitorización Hemodinámica</p>
+    </footer>
 
-    <!-- 9) MORFOLOGÍA CLÍNICA -->
-    <section class="two" style="margin-top:16px">
-      <article class="card">
-        <h3>8) Lectura clínica de la morfología</h3>
-        <ul class="list">
-          <li><b>Incisura dícrota</b> en 1/3 medio: normal; superior: vasoconstricción; inferior: vasodilatación.</li>
-          <li><b>Pulsus alternans</b> (fuerte/débil alternante): disfunción VI / shock.</li>
-          <li><b>Pulsus bisferiens</b> (doble pico): IAo o estenosis subaórtica.</li>
-          <li><b>Pulsus tardus et parvus</b> (ascenso lento, pulso pequeño): estenosis aórtica severa.</li>
-        </ul>
-      </article>
-      <figure class="card">
-        <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-14.png" alt="Incisura dícrota y tono vascular"/>
-        <figcaption class="note">Incisura y tono vascular.</figcaption>
-      </figure>
-    </section>
-
-    <!-- 10) USO EN RCP -->
-    <section class="card" style="margin-top:16px">
-      <h3>9) Uso durante paro cardíaco</h3>
-      <div class="grid">
-        <article>
-          <ul class="list">
-            <li><b>PAD durante compresiones &gt; 25 mmHg</b> → compresiones efectivas.</li>
-            <li>Reaparición de onda pulsátil = <b>ROSC</b>.</li>
-            <li>Onda presente sin pulso palpable → sospecha <b>AESP</b>.</li>
-          </ul>
-          <p class="note">Reanimación guiada por perfusión: ajusta profundidad/frecuencia de compresiones y vasoactivos según la OPA.</p>
-        </article>
-        <figure class="card">
-          <img class="img" src="https://asenfovalle.cl/wp-content/uploads/2025/10/Agregar-un-subtitulo-3.png" alt="Esquema sistema durante RCP"/>
-          <figcaption class="note">Columna líquida continua para medición fiable durante RCP.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- 11) PREVENCIÓN DE ARTEFACTOS -->
-    <section class="card" style="margin:16px 0 10px">
-      <h3>10) Prevención de artefactos y recomendaciones</h3>
-      <ul class="list">
-        <li>Eliminar <b>burbujas</b>, evitar <b>llaves</b> y <b>extensiones largas/blandas</b>; usar set rígido/corto.</li>
-        <li>Revisar <b>coágulos</b>, <b>acodaduras</b> y viscosidad del fluido; acondicionar a <b>temperatura corporal</b>.</li>
-        <li>Realizar “<b>cero</b>” tras manipulación o extracciones y <b>flush test</b> cuando la lectura sea dudosa.</li>
-        <li>Preferir <b>sistema cerrado de extracción</b> para minimizar contaminación y pérdidas sanguíneas.</li>
-      </ul>
-      <p class="footer">Material docente para el curso “Accesos Vasculares Ecoguiados”.</p>
-    </section>
-  </div>
-
-  <!-- JS calculadora -->
-  <script>
-    function calcVPP(){
-      const a=parseFloat(document.getElementById('ppmax').value||'0');
-      const b=parseFloat(document.getElementById('ppmin').value||'0');
-      const m=parseFloat(document.getElementById('ppmed').value||'0');
-      const out=document.getElementById('vppOut');
-      if(m<=0){out.textContent="Ingresa PPmedia > 0.";return;}
-      const vpp=((a-b)/m)*100;
-      let msg="";
-      if(vpp>12){
-        msg="<b>VPP: "+vpp.toFixed(1)+"%</b> → <b>Respondedor a volumen.</b>";
-        msg+="<br>Conducta: bolo de cristaloide 250–500 ml, reevaluar PAM y VPP. Si PAM sube y VPP ↓ <12%, suspender fluidos y reducir vasopresor.";
-      }else if(vpp>=8 && vpp<=12){
-        msg="<b>VPP: "+vpp.toFixed(1)+"%</b> → <b>Zona gris.</b>";
-        msg+="<br>Conducta: complementar con ecografía (VCI), PVC o gasto cardíaco; evitar sobrecarga si hay congestión.";
-      }else{
-        msg="<b>VPP: "+vpp.toFixed(1)+"%</b> → <b>No respondedor a volumen.</b>";
-        msg+="<br>Conducta: evitar más fluidos; optimizar con inotrópicos/vasopresores y búsqueda de otras causas.";
-      }
-      out.innerHTML=msg;
-    }
-  </script>
 </body>
 </html>
